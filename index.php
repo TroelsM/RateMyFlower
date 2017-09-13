@@ -1,4 +1,5 @@
 <?php
+session_start();
 include("inc/config.php");
 
 if(!isset($_SESSION["loggedIn"])){

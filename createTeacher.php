@@ -13,7 +13,7 @@ if($create = filter_input(INPUT_POST, 'create')){
     $billede        = $mappenavn . $tidspunkt . "-" . basename($_FILES["image"]["name"]);
     $billedetype    = strtolower(pathinfo($billede, PATHINFO_EXTENSION));
     $billedeFil     = $_FILES["image"];
-    $subject        = filter_input(INPUT_POST, 'subject',FILTER_VALIDATE_INT) or besked("fejl", "Ikke gyldig fag");
+    $subject        = filter_input(INPUT_POST, 'subject',FILTER_VALIDATE_INT) or besked("fejl", "Ikke gyldig kategori");
 
     createTeacher($link, $name, $billede, $billedetype, $billedeFil, $subject);
 }
@@ -42,12 +42,12 @@ include("menu.php");
         }
         ?>
         <form class="form" action="?create=1" method="post" enctype="multipart/form-data">
-            <input type="text" name="name" placeholder="Lærerens Navn" required>
+            <input type="text" name="name" placeholder="Navngiv billede" required>
             <select name="subject" required>
                 <?=getSubjects($link)?>
             </select>
             <input type="file" name="image">
-            <input type="submit" name="create" value="Tilføj Lærer">
+            <input type="submit" name="create" value="Tilføj billede">
         </form>
     </div>
 <script src="js/script.js" type="text/javascript"></script>

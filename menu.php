@@ -4,7 +4,7 @@
         <div class="menuPunkter">
             <a href="index.php"><span>Forside</span></a>
             <a href="toplist.php"><span>Topliste</span></a>
-            <a href="subjects.php"><span>Fag</span></a>
+            <a href="subjects.php"><span>Kategorier</span></a>
             <a href="settings.php"><span>Indstillinger</span></a>
         </div>
         <div class="ikoner">

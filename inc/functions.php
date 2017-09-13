@@ -62,7 +62,7 @@ function createTeacher($link, $teacherName, $teacherImage, $imageType, $imageFil
             $teacherId = $link->insert_id;
 
             if($stmt->affected_rows > 0){
-                besked("success", "Læreren er nu tilføjet");
+                besked("success", "Dit billede er nu tilføjet");
             }
             $stmt->close();
 
@@ -72,7 +72,7 @@ function createTeacher($link, $teacherName, $teacherImage, $imageType, $imageFil
             $stmt->execute();
 
             if($stmt->affected_rows < 1){
-                besked("fejl", "Kunne ikke tilføje fag");
+                besked("fejl", "Kunne ikke tilføje kategorien");
             }
             $stmt->close();
 
@@ -179,7 +179,7 @@ function getToplist($link){
                 <?=$i?>. <?=$tname?>
             </span>
             <span class="fag">
-                Fag: <?=$subjectName?>
+                Kategori: <?=$subjectName?>
             </span>
             <span class="snit">
                 Gennemsnit: <?=round($average, 1)?>
@@ -279,7 +279,7 @@ JOIN `subject` ON teacherSubject.subjectId = `subject`.subjectId';
                 <thead>
                     <th width="100">&nbsp;</th>
                     <th>Navn</th>
-                    <th>Fag</th>
+                    <th>Kategori</th>
                     <th><i class="fa fa-times"></i></th>
                 </thead>';
 
@@ -334,7 +334,7 @@ function deleteTeacher($link, $tid){
         $tstmt->bind_param('i', $tid);
         $tstmt->execute();
         if($tstmt->affected_rows > 0){
-            echo "Læreren er nu slettet";
+            echo "Billedet er nu slettet";
         } else {
             echo "Kunne ikke slettes - Del 3";
         }

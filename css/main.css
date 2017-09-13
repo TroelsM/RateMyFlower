@@ -34,18 +34,15 @@ body {
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  background: -webkit-linear-gradient(315deg, #e91e63, #9c27b0);
-  background: -o-linear-gradient(315deg, #e91e63, #9c27b0);
-  background: linear-gradient(135deg, #e91e63, #9c27b0);
+  background: -webkit-linear-gradient(315deg, #000, #fff);
+  background: -o-linear-gradient(315deg, #000, #fff);
+  background: linear-gradient(135deg, #000, #fff);
   background-size: 400% 400%;
   background-repeat: no-repeat;
-  background-attachment: fixed;
-  -webkit-animation: baggrundAnim 6s ease infinite;
-  animation: baggrundAnim 6s ease infinite; }
+  background-attachment: fixed; }
   body .loginBox {
     width: 100%;
     max-width: 500px;
-    background: rgba(255, 255, 255, 0.5);
     color: #FFF;
     padding: 1em;
     border-radius: 10px;
